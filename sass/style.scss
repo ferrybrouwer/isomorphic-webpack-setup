@@ -1,12 +1,16 @@
-$background-color: green;
+$background-color: white;
 
 body {
 	background-color: $background-color;
 	user-select: none;
 	border-radius: 50%;
 	box-sizing: border-box;
-	box-shadow: 1px 1px 5px rgba(0,0,0,.5);
+	font-family: 'Georgia';
+	color: red;
 }
 
+h1 {
+	color: darkred;
+}
 
 

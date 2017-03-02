@@ -10,6 +10,14 @@ const app = express()
 // set public as root
 app.use(express.static('public'))
 
+// set headers
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', 'http://0.0.0.0:9292')
+    res.header('Access-Control-Allow-Credentials', 'true')
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
+	next()
+})
+
 // route to root
 app.get('/', (req, res) => {
 	const html = ReactDOMServer.renderToString(<IndexComponent />)
@@ -20,3 +28,4 @@ app.get('/', (req, res) => {
 app.listen(appConfig.PORT, appConfig.HOST, () => {
 	console.log(`> Server started at http://${appConfig.HOST}:${appConfig.PORT}`)
 })
+

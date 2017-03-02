@@ -1,12 +1,5 @@
 module.exports = [
 
-	// .js/.jsx
-	{
-		test: /\.jsx?$/,
-		exclude: /(node_modules|public\/)/,
-		loaders: ['react-hot-loader', 'babel-loader']
-	},
-
 	// font files
 	{
 		test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
