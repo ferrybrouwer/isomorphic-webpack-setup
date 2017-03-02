@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default class IndexComponent extends React.Component {
+export default class App extends React.Component {
 
     _onClick() {
         alert('click button');

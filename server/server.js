@@ -1,7 +1,7 @@
 import express from 'express'
 import React from 'react'
 import ReactDOMServer from 'react-dom/server'
-import IndexComponent from './../components/IndexComponent.jsx'
+import App from './../components/App.jsx'
 import appConfig from './../app.config'
 
 // create app
@@ -20,7 +20,7 @@ app.use((req, res, next) => {
 
 // route to root
 app.get('/', (req, res) => {
-    const html = ReactDOMServer.renderToString(<IndexComponent />)
+    const html = ReactDOMServer.renderToString(<App />)
     res.send(html)
 })
 

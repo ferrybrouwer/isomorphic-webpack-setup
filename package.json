@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "node server",
-    "dev-server": "webpack-dev-server --config webpack.dev.config.js",
-    "build": "webpack -p --config webpack.config.js"
+    "start-api": "node server",
+    "start-dev-api": "webpack-dev-server --config webpack.dev.config.js",
+    "dev-serve": "npm run start-api & npm run start-dev-api",
+    "serve": "webpack -p --config webpack.config.js && npm run start-api"
   },
   "author": "Ferry Brouwer <ferry.brouwer@gmail.com>",
   "license": "ISC",
