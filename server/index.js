@@ -1,5 +1,5 @@
 require('babel-register')({
-	presets: ['react', 'es2015']
+    presets: ['react', 'es2015']
 })
 
 const server = require('./server')

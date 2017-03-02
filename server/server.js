@@ -15,17 +15,17 @@ app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', 'http://0.0.0.0:9292')
     res.header('Access-Control-Allow-Credentials', 'true')
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
-	next()
+    next()
 })
 
 // route to root
 app.get('/', (req, res) => {
-	const html = ReactDOMServer.renderToString(<IndexComponent />)
-	res.send(html)
+    const html = ReactDOMServer.renderToString(<IndexComponent />)
+    res.send(html)
 })
 
 // listen to host:port and notify stdout
 app.listen(appConfig.PORT, appConfig.HOST, () => {
-	console.log(`> Server started at http://${appConfig.HOST}:${appConfig.PORT}`)
+    console.log(`> Server started at http://${appConfig.HOST}:${appConfig.PORT}`)
 })
 
